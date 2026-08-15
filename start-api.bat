@@ -1,4 +1,5 @@
 @echo off
-cd /d D:\ecommerce\backend
+set "ROOT=%~dp0"
+cd /d "%ROOT%backend"
 call .venv\Scripts\activate.bat
-python app.py > D:\ecommerce\api.log 2>&1
+python app.py > "%ROOT%api.log" 2>&1

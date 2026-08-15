@@ -8,19 +8,25 @@ Flask + MongoDB REST API + vanilla HTML/CSS/JS frontend with **auth, per-user ca
 
 ## Backend setup
 ```bash
-cd D:\ecommerce\backend
+cd backend
 python -m venv .venv
-.venv\Scripts\activate
+.venv\Scripts\activate      # Windows
+# source .venv/bin/activate # macOS/Linux
 pip install -r requirements.txt
-copy .env.example .env
+copy .env.example .env      # Windows: copy, macOS/Linux: cp .env.example .env
 python seed.py
 python app.py
 ```
 Runs on `http://localhost:5000`.
 
+> Note: a working `.env` (with `USE_MOCK=1`, so it runs against an in-memory
+> mock database — no real MongoDB install needed) is already included in
+> `backend/.env` for convenience. Overwrite it with `.env.example` only if
+> you want to connect to a real MongoDB instance.
+
 ## Frontend
 ```bash
-cd D:\ecommerce\frontend
+cd frontend
 python -m http.server 8080
 ```
 Open `http://localhost:8080`.
