@@ -1,0 +1,11 @@
+﻿Flask==3.0.3
+Flask-Cors==4.0.1
+pymongo==4.8.0
+python-dotenv==1.0.1
+PyJWT==2.9.0
+bcrypt>=4.2,<6
+pydantic>=2.10
+email-validator==2.2.0
+flask-limiter==3.8.0
+mongomock>=4.3
+pytest>=8.0

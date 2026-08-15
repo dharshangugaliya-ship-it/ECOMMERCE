@@ -1,0 +1,25 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Shop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" onclick="go('shop')">🛍️ Mini Shop</div>
+    <div class="actions" id="actions"></div>
+  </header>
+
+  <main id="view"></main>
+
+  <div id="apiBanner" class="api-banner hidden" role="status" aria-live="polite">
+    <span>⚠️ Can't reach the server. <a id="apiRetry" href="#">Retry</a></span>
+  </div>
+  <div id="toastHost" class="toast-host"></div>
+  <div id="modal" class="modal hidden" onclick="if(event.target.id==='modal') closeModal()"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
